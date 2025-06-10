@@ -1,60 +1,142 @@
+/* Importação de uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-  font-family: sans-serif;
-  margin: 20px;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: 'Poppins', sans-serif; /* Aplica a nova fonte */
+    margin: 0; /* Remove margem padrão do body */
+    padding: 20px;
+    background-color: #f0f2f5; /* Cor de fundo mais suave */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura */
 }
 
 h1 {
-  color: #0056b3;
+    color: #2c3e50; /* Cor mais escura e profissional para o título */
+    margin-bottom: 30px;
+    font-weight: 600; /* Deixa o título mais marcante */
 }
 
 form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave e proeminente */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Aumenta o espaçamento entre os campos */
+    max-width: 450px; /* Largura máxima um pouco maior para o formulário */
+    width: 100%; /* Garante que o formulário ocupe a largura disponível */
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0; /* Borda sutil */
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+    padding: 12px 15px; /* Aumenta o padding para melhor toque */
+    border: 1px solid #ced4da; /* Cor da borda mais neutra */
+    border-radius: 6px; /* Bordas dos inputs mais arredondadas */
+    font-size: 16px; /* Tamanho de fonte consistente */
+    width: calc(100% - 30px); /* Ajusta largura considerando padding */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave no foco */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2ee947; /* Borda azul no foco */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra suave no foco */
+    outline: none; /* Remove outline padrão */
 }
 
 button {
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+    padding: 12px 20px;
+    background-color: #2ee947;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px; /* Aumenta o tamanho da fonte do botão */
+    font-weight: 600; /* Deixa o texto do botão mais encorpado */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições no hover */
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #2ee947;
+    transform: translateY(-2px); /* Efeito de "levantar" no hover */
+}
+
+/* Estilo para os botões de teste */
+#rodarTestesUnitBtn, #rodarTestesComponentBtn {
+    background-color: #6c757d; /* Cor neutra para botões de teste */
+    margin-right: 10px; /* Espaçamento entre os botões */
+    margin-bottom: 20px;
+}
+
+#rodarTestesUnitBtn:hover, #rodarTestesComponentBtn:hover {
+    background-color: #5a6268;
 }
 
 p {
-  font-weight: bold;
+    font-weight: 500; /* Peso da fonte para parágrafos */
+    margin-top: 10px;
+    font-size: 1.1em; /* Tamanho um pouco maior */
 }
 
 #statusCadastro {
-  margin-top: 10px;
+    margin-top: 15px; /* Mais espaço acima do status */
+    font-weight: 600; /* Status mais visível */
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block; /* Permite padding e margin */
+}
+
+/* Cores específicas para as mensagens de status */
+#statusCadastro[style*="green"] {
+    background-color: #d4edda; /* Fundo verde claro para sucesso */
+    color: #155724; /* Texto verde escuro */
+    border: 1px solid #c3e6cb;
+}
+
+#statusCadastro[style*="red"] {
+    background-color: #f8d7da; /* Fundo vermelho claro para erro */
+    color: #721c24; /* Texto vermelho escuro */
+    border: 1px solid #f5c6cb;
 }
 
 #testes-resultados {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #e9ecef;
-  border-radius: 8px;
-  white-space: pre-wrap; /* Para quebra de linha dos resultados */
+    margin-top: 30px; /* Mais espaço acima dos resultados dos testes */
+    padding: 20px;
+    background-color: #e2e6ea; /* Cor de fundo mais clara */
+    border-radius: 8px;
+    white-space: pre-wrap;
+    font-family: 'Cascadia Code', 'Fira Code', monospace; /* Fonte monoespaçada para resultados */
+    font-size: 0.9em;
+    border: 1px solid #d6d8db;
+    max-width: 90%; /* Limita a largura para melhor leitura */
+    width: 100%;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
 }
