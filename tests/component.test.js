@@ -66,7 +66,7 @@ function runComponentTests() {
     if (statusCadastroSpan.textContent !== "Cadastro realizado com sucesso!") {
       throw new Error(
         "Mensagem de sucesso não exibida corretamente: " +
-          statusCadastroSpan.textContent
+        statusCadastroSpan.textContent
       );
     }
     if (statusCadastroSpan.style.color !== "green") {
@@ -101,7 +101,7 @@ function runComponentTests() {
     if (statusCadastroSpan.textContent !== "Erro: As senhas não coincidem.") {
       throw new Error(
         "Mensagem de erro não exibida corretamente: " +
-          statusCadastroSpan.textContent
+        statusCadastroSpan.textContent
       );
     }
     if (statusCadastroSpan.style.color !== "red") {

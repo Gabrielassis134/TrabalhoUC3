@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <h1>Cadastro de Usuário</h1>
 
-    <form id="cadastroForm">
-      <input type="text" id="nome" placeholder="Nome" required />
-      <input type="email" id="email" placeholder="Email" required />
-      <input type="password" id="senha" placeholder="Senha" required />
-      <input
-        type="password"
-        id="confirmarSenha"
-        placeholder="Confirmar Senha"
-        required
-      />
-      <button type="submit">Cadastrar</button>
-    </form>
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-    <p>Status: <span id="statusCadastro"></span></p>
-    <button id="rodarTestesUnitBtn">Rodar Testes Unitarios</button>
-    <button id="rodarTestesComponentBtn">Rodar Testes Component</button>
+<body>
+  <h1>Cadastro de Usuário</h1>
 
-    <div id="testes-resultados"></div>
+  <form id="cadastroForm">
+    <input type="text" id="nome" placeholder="Nome" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="senha" placeholder="Senha" required />
+    <input type="password" id="confirmarSenha" placeholder="Confirmar Senha" required />
+    <button type="submit">Cadastrar</button>
+  </form>
 
-    <script src="src/cadastro.js"></script>
-    <script src="src/rodarTestes.js"></script>
-    <script src="tests/unitario.test.js"></script>
-    <script src="tests/component.test.js"></script>
-  </body>
+  <p>Status: <span id="statusCadastro"></span></p>
+  <button id="rodarTestesUnitBtn">Rodar Testes Unitarios</button>
+  <button id="rodarTestesComponentBtn">Rodar Testes Component</button>
+
+  <div id="testes-resultados"></div>
+
+  <script src="src/cadastro.js"></script>
+  <script src="src/rodarTestes.js"></script>
+  <script src="tests/unitario.test.js"></script>
+  <script src="tests/component.test.js"></script>
+</body>
+
 </html>
